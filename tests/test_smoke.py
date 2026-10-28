@@ -1,5 +1,12 @@
+import unittest
+
 import sandbox
 
 
-def test_package_imports():
-    assert sandbox.__doc__
+class SmokeTest(unittest.TestCase):
+    def test_package_imports(self):
+        self.assertTrue(sandbox.__doc__)
+
+
+if __name__ == "__main__":
+    unittest.main()
